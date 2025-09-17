@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwind from "tailwindcss";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
-// ...existing code...
+
 export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && screenGraphPlugin()],
   publicDir: "./static",
@@ -14,6 +13,5 @@ export default defineConfig(({ mode }) => ({
       plugins: [tailwind()],
     },
   },
-  assetsInclude: ["**/*.JPG","**/*.jpeg","**/*.png], // <-- Add this line
+  assetsInclude: ["**/*.JPG","**/*.jpeg","**/*.png"]
 }));
-// ...existing code...
