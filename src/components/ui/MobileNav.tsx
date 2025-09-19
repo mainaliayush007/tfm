@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "./button";
 import { cn } from "../../lib/utils";
+import { Link } from "react-router-dom";
 
 interface NavigationItem {
   label: string;
@@ -24,6 +25,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ navigationItems }) => {
       <nav className="hidden md:block border-t-2 border-b-2 border-[#8B4513] py-3">
         <div className="flex justify-center space-x-4 md:space-x-8  text-sm">
           {navigationItems.map((item) => (
+            
             <Button
               key={item.label}
               variant="ghost"
@@ -33,8 +35,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({ navigationItems }) => {
                   : "text-[#8B4513] hover:text-[#c41e3a]"
               }`}
             >
-              {item.label}
+             <a href={item.link}> {item.label}</a>
             </Button>
+           
           ))}
         </div>
       </nav>

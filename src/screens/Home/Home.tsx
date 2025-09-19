@@ -1,26 +1,14 @@
-import React from "react";
 import { Badge } from "../../components/ui/badge";
-import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import { MobileNav } from "../../components/ui/MobileNav";
-import logo from "../../assets/logo.png";
+import { Header } from "../../components/layout/Header";
+import { Footer } from "../../components/layout/Footer";
 import kon1 from "../../assets/Kon1.JPG";
 import kon2 from "../../assets/Kon2.JPG";
 import sun from "../../assets/sun.jpg";
-import insta from "../../assets/insta.png";
-import fb from "../../assets/fb.png";
+
 
 export const Home = (): JSX.Element => {
-  const navigationItems = [
-    { label: "HOME", active: true },
-    { label: "ABOUT US", active: false },
-    { label: "LOCATIONS", active: false },
-    { label: "TRADERS", active: false },
-    { label: "GALLERY", active: false },
-    { label: "ENTRY", active: false },
-    { label: "CONTACT US", active: false },
-  ];
-
+ 
   const tradingCategories = [
     {
       items: [
@@ -56,18 +44,7 @@ export const Home = (): JSX.Element => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto bg-[#f5f3e8] border-2 border-black">
-        {/* Header with Logo */}
-        <header className="relative bg-[#f5f3e8] px-8 py-6">
-          <div className="text-center mb-6">
-            <div className="inline-block relative w-2/3">
-              <img src={logo} alt="Trade Free Market" />
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <MobileNav navigationItems={navigationItems} />
-        </header>
+      <div className="max-w-7xl mx-auto bg-[#f5f3e8]">
 
         {/* Trade Free Markets Section */}
         <section className="text-center py-8 bg-[#f5f3e8] px-4">
@@ -88,7 +65,7 @@ export const Home = (): JSX.Element => {
         </div>
 
         {/* Trading Section */}
-        <section style={{fontFamily:'Averia Libre'}} className="py-8 px-4 md:px-12 bg-[#f5f3e8]">
+        <section style={{fontFamily:'Averia Libre'}} className="py-8 px-4 md:px-12 ">
           <h2 className="text-center text-2xl md:text-4xl font-bold text-[#c41e3a] mb-8 tracking-[0.2em]">
             TRADING
           </h2>
@@ -113,7 +90,7 @@ export const Home = (): JSX.Element => {
           <div className="border-t-2 border-dashed border-[#8B4513]"></div>
         </div>
         {/* Market Photos Section */}
-        <section className="px-4 md:px-8  bg-[#f5f3e8]">
+        <section className="px-4 md:px-8 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
             <Card className="overflow-hidden border-2 border-[#8B4513]">
               <CardContent className="p-0">
@@ -141,7 +118,7 @@ export const Home = (): JSX.Element => {
         </section>
 
         {/* Map Section */}
-        <section className="px-4 md:px-8 bg-[#f5f3e8]">
+        <section className="px-4 md:px-8">
           <Card className="overflow-hidden border-2 border-[#8B4513]">
             <CardContent className="p-0">
               <iframe
@@ -155,7 +132,7 @@ export const Home = (): JSX.Element => {
         </section>
 
         {/* Weather Notice */}
-        <section className="px-4 md:px-8  bg-[#f5f3e8] py-6">
+        <section className="px-4 md:px-8 py-6">
           <Card className="bg-[#f4d03f] border-2 border-[#8B4513]">
             <CardContent className="p-4 md:p-6 text-center">
               <h4 className="font-bold text-[#c41e3a] mb-3 text-base md:text-2xl">
@@ -179,21 +156,8 @@ export const Home = (): JSX.Element => {
               alt="Sunset silhouette"
               className="w-full h-full object-cover opacity-80"
             />
-          </div>
-        {/* Footer */}
-        <footer className="relative">
+          </div>    
 
-          {/* Footer Bar */}
-          <div className="bg-[#8B4513] text-white py-3 px-4 md:px-8 h-24 ">
-            <div className="flex flex-col md:flex-row justify-between items-center  text-xs md:text-sm space-y-2 md:space-y-0 md:mt-8 mt-4" >
-              <div className="flex space-x-4 md:w-fit">
-                <img className="w-4 h-4" src={insta}/>
-                <img className="w-4 h-4" src={fb}/>
-              </div>
-              <span className="font-small  md:w-screen md:text-center">© Copyright 2025 Trade Free Market</span>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   );

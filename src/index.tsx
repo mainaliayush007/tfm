@@ -1,10 +1,8 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { Home } from "./screens/Home/Home";
-import './index.css';
 
-createRoot(document.getElementById("app") as HTMLElement).render(
-  <StrictMode>
-    <Home />
-  </StrictMode>,
-);
+import { createRoot } from "react-dom/client";
+import App from "./App";
+
+const container = document.getElementById("app");
+const root = createRoot(container!);
+root.render(<App/>)
+

@@ -1,4 +1,20 @@
 {
-  "nodes": [],
+  "nodes": [
+    {
+      "id": "src/screens/Home/Home.tsx",
+      "label": "Home",
+      "routes": [
+        "/"
+      ],
+      "isRoot": true
+    },
+    {
+      "id": "src/screens/Gallery/Gallery.tsx",
+      "label": "Gallery",
+      "routes": [
+        "/gallery"
+      ]
+    }
+  ],
   "edges": []
 }
